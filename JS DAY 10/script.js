@@ -13,7 +13,7 @@ document.querySelector('#container p').remove()
 
 
 const image=document.createElement("img");
-image.setAttribute("src","https://mycareersview.com/page-details.php?id=3260&datatype=C");
+image.setAttribute("src","image.png");
 image.setAttribute("alt","K.R Mangalam");
 const gallery=document.getElementById("gallery");
 gallery.appendChild(image);
