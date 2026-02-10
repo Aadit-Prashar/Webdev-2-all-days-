@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Event Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <h1 class="title">🎯Smart Event Dashboard</h1>
+
+  <div class="grid">
+
+    <!-- ---ADDING NEW EVENT  -->
+    <div class="card" id="eventForm">
+      <h2>Add New Event</h2>
+
+      <input type="text" class="inputarea" id="title" placeholder="Event Title">
+      <input type="date" class="inputarea" id="date">
+      <label for="category" class="inputarea" placeholder="Category">
+        <select id="category" name="Category">
+          <option value="conference">Conference</option>
+          <option value="Social">Social</option>
+          <option value="WorkShop">WorkShop</option>
+          <option value="Party">Webinar</option>
+          <option value="Social">Social</option>
+        </select>
+      <input type="text" class="inputarea" id="location" placeholder="Location">
+      <textarea id="description" class="inputarea" placeholder="Description"></textarea>
+
+      <button id="addEvent">Add Event</button>
+    </div>
+
+     <!-- SHOW MY EVENTS  -->
+    <div class="card">
+
+      <h2>My Events</h2>
+      <p id="noEvents">No events yet. Add your first event!</p>
+      <div id="eventList"></div>
+
+    <div id="button1_2">
+      <button id="clearAll">Clear All Events</button>
+      <button id="sampleEvent">Add Sample Events</button>
+    </div>
+
+</div>
+
+    <!-- DOM MANIPULATION DEMO -->
+    <div class="card dom">
+      <h2>DOM Manipulation Demo</h2>
+
+      <p><b>Original HTML:</b></p>
+      <div id="demoHtml"><strong>Bold Text</strong> with spaces</div>
+      <p id="output"></p>
+    </div>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
