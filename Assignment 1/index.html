@@ -1,61 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Smart Event Dashboard</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Event Dashboard</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="container">
-  <h1 class="title">🎯Smart Event Dashboard</h1>
+    <h1>🎯 Smart Event Dashboard</h1>
+    <div class="dashboard">
+        <div class="form-section">
+            <h2>Add New Event</h2>
 
-  <div class="grid">
+            <form id="eventForm">
+                <div class="form-group">
+                    <label for="eventTitle">Event Title:</label>
+                    <input type="text" id="eventTitle" required>
+                </div>
 
-    <!-- ---ADDING NEW EVENT  -->
-    <div class="card" id="eventForm">
-      <h2>Add New Event</h2>
+                <div class="form-group">
+                    <label for="eventDate">Event Date:</label>
+                    <input type="date" id="eventDate" required>
+                </div>
 
-      <input type="text" class="inputarea" id="title" placeholder="Event Title">
-      <input type="date" class="inputarea" id="date">
-      <label for="category" class="inputarea" placeholder="Category">
-        <select id="category" name="Category">
-          <option value="conference">Conference</option>
-          <option value="Social">Social</option>
-          <option value="WorkShop">WorkShop</option>
-          <option value="Party">Webinar</option>
-          <option value="Social">Social</option>
-        </select>
-      <input type="text" class="inputarea" id="location" placeholder="Location">
-      <textarea id="description" class="inputarea" placeholder="Description"></textarea>
+                <div class="form-group">
+                    <label for="eventCategory">Category:</label>
+                    <select id="eventCategory" required>
+                        <option value="Conference">Conference</option>
+                        <option value="Workshop">Workshop</option>
+                        <option value="Meetup">Meetup</option>
+                        <option value="Webinar">Webinar</option>
+                        <option value="Social">Social</option>
+                    </select>
+                </div>
 
-      <button id="addEvent">Add Event</button>
+                <div class="form-group">
+                    <label for="eventDescription">Description:</label>
+                    <textarea id="eventDescription" required></textarea>
+                </div>
+
+                <button type="submit">Add Event</button>
+            </form>
+        </div>
+
+        <div class="events-section">
+            <h2>My Events</h2>
+
+            <div class="controls">
+                <button class ="actionbtn" id="clearAllBtn">Clear All Events</button>
+                <button class ="actionbtn" id="addSampleBtn">Add Sample Events</button>
+            </div>
+
+            <div id="eventContainer">
+                <div class="empty-state">
+                    No events yet. Add your first event!
+                </div>
+            </div>
+        </div>
     </div>
+    <div class="demo-section">
+        <h2>DOM Manipulation Demo</h2>
 
-     <!-- SHOW MY EVENTS  -->
-    <div class="card">
-
-      <h2>My Events</h2>
-      <p id="noEvents">No events yet. Add your first event!</p>
-      <div id="eventList"></div>
-
-    <div id="button1_2">
-      <button id="clearAll">Clear All Events</button>
-      <button id="sampleEvent">Add Sample Events</button>
+        <div class="demo-box">
+            <div id="demoContent" class="demo-content">
+                Press any key to see the difference!
+            </div>
+        </div>
     </div>
-
 </div>
-
-    <!-- DOM MANIPULATION DEMO -->
-    <div class="card dom">
-      <h2>DOM Manipulation Demo</h2>
-
-      <p><b>Original HTML:</b></p>
-      <div id="demoHtml"><strong>Bold Text</strong> with spaces</div>
-      <p id="output"></p>
-    </div>
-  </div>
-</div>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
