@@ -22,8 +22,8 @@ login("aadit@gmail.com","password123",(userdata)=>{
     console.log(userdata);
     getVideoList(userdata.uname,(videolist)=>{
         console.log(videolist);
-    getVideoDetail(videolist[0],(videoDetail)=>{
-        console.log(videoDetail);
+        getVideoDetail(videolist[0],(videoDetail)=>{
+            console.log(videoDetail);
         })
     });
 });
