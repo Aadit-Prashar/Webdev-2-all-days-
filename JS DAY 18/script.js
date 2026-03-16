@@ -1,0 +1,24 @@
+async function getData(){
+    try{
+        const API_key="ee3b43396b89fd7239f36527946c0055";
+        const response= await fetch("https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid={API key}");
+        const data=await response.json();
+        console.log(city);
+        console.log(data.main.temp)
+    }catch(err){
+        console.error(err);
+    }
+}
+getData("gurugram")
+
+// async function getData() {
+//     try {
+//         const response = await fetch('https://jsonplaceholder.typicode.com/users');
+//         const data = await response.json();
+//         console.log(data);
+//     } catch (err) {
+//         console.error(err);
+//     }
+// }
+
+// getData();
