@@ -1,10 +1,11 @@
-async function getData(){
+async function getData(city){
     try{
         const API_key="ee3b43396b89fd7239f36527946c0055";
-        const response= await fetch("https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid={API key}");
+        const response= await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_key}&units=metric`);
         const data=await response.json();
         console.log(city);
         console.log(data.main.temp)
+        console.log(data.main.humidity)
     }catch(err){
         console.error(err);
     }
